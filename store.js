@@ -9,7 +9,7 @@ const dictionary={};
 var args = process.argv.slice(2);
 
 var command=args[0];
-//store to run function use: node -e 'require("./store")' add Mykey Myvalue
+
 if(command=="add"){
     add();
 }
@@ -43,7 +43,6 @@ function add(){
    
 }
 
-//Read to run function use: node -e 'require("./server").read()'
 function read(){
     file.readFile('stored.txt', 'utf8', function (err,data) {
         if (err) {
@@ -58,7 +57,6 @@ function getByKey(){
     {
         var key=args[1];
         var data=file.readFileSync('stored.txt').toString().split('\n');
-        console.log(data);
         var i=0;
         var myLines = file.readFileSync('stored.txt').toString().split('\n').forEach(function (line) {
             console.log(line); 
