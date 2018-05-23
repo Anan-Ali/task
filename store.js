@@ -4,6 +4,7 @@ const app=express();
 const port=5879;
 const file=require('file-system');
 const prompt=require('prompt');
+var x=5;
 
 const dictionary={};
 var args = process.argv.slice(2);
